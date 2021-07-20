@@ -1,0 +1,23 @@
+.button {
+  cursor: pointer;
+  font: inherit;
+  border: none;
+  background-color: #0c0116;
+  color: white;
+  /* padding-left : 0rem;     */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 47px;
+  font-weight: bold;
+}
+
+/* .button:hover,
+.button:active {
+  background-color: #ED4E4E;
+} */
+
+.icon {
+  margin-left: 0.5rem;
+  /* margin-bottom: 0.5rem; */
+}
