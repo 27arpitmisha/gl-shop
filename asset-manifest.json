@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/gl-shop/static/css/main.045c2b19.chunk.css",
-    "main.js": "/gl-shop/static/js/main.0dcc132b.chunk.js",
-    "main.js.map": "/gl-shop/static/js/main.0dcc132b.chunk.js.map",
+    "main.css": "/gl-shop/static/css/main.1985c058.chunk.css",
+    "main.js": "/gl-shop/static/js/main.7321f583.chunk.js",
+    "main.js.map": "/gl-shop/static/js/main.7321f583.chunk.js.map",
     "runtime-main.js": "/gl-shop/static/js/runtime-main.18b7ade3.js",
     "runtime-main.js.map": "/gl-shop/static/js/runtime-main.18b7ade3.js.map",
     "static/css/2.d5e620ed.chunk.css": "/gl-shop/static/css/2.d5e620ed.chunk.css",
@@ -10,7 +10,7 @@
     "static/js/2.bd5797b7.chunk.js.map": "/gl-shop/static/js/2.bd5797b7.chunk.js.map",
     "index.html": "/gl-shop/index.html",
     "static/css/2.d5e620ed.chunk.css.map": "/gl-shop/static/css/2.d5e620ed.chunk.css.map",
-    "static/css/main.045c2b19.chunk.css.map": "/gl-shop/static/css/main.045c2b19.chunk.css.map",
+    "static/css/main.1985c058.chunk.css.map": "/gl-shop/static/css/main.1985c058.chunk.css.map",
     "static/js/2.bd5797b7.chunk.js.LICENSE.txt": "/gl-shop/static/js/2.bd5797b7.chunk.js.LICENSE.txt",
     "static/media/banner2.359f0b3f.png": "/gl-shop/static/media/banner2.359f0b3f.png"
   },
@@ -18,7 +18,7 @@
     "static/js/runtime-main.18b7ade3.js",
     "static/css/2.d5e620ed.chunk.css",
     "static/js/2.bd5797b7.chunk.js",
-    "static/css/main.045c2b19.chunk.css",
-    "static/js/main.0dcc132b.chunk.js"
+    "static/css/main.1985c058.chunk.css",
+    "static/js/main.7321f583.chunk.js"
   ]
 }
