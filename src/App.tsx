@@ -5,16 +5,19 @@ import Header from "./Components/Header/Header";
 import AvailableItem from "./Components/Shopping/AvailableItem/AvailableProduct";
 import ProductDetails from "./Components/Shopping/ProductDetail/ProductDetails";
 import AvailableWishListProduct from "./Components/Shopping/WishList/AvailableWishListProduct";
+import CartContext from "./Store/CartContext";
 import CartProvider from "./Store/CartProvider";
 
 function App() {
   const product = {
      id: "", name: "", description: "", image: "", price: 0 
   }
+
   const [showCart, setShowCart] = useState(false);
   const [showWishList, setShowWishList] = useState(false);
   const [showProductDetails, setShowProductDetails] = useState(false);
   const [productDetail, setProductDetail] = useState(product);
+
 
   const showCartHandler = () => {
     setShowCart(true);
@@ -28,9 +31,6 @@ function App() {
   const hideWishListhandler = () => {
     setShowWishList(false);
   };
-  // const showWishListHandler = () =>{
-  //   setShowProductDetails(true);
-  // }
   const hideProductDetailhandler = () => {
     setShowProductDetails(false);
   };

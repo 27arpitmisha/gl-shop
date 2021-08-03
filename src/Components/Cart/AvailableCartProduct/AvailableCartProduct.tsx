@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import classes from "./AvailableCart.module.css";
 import CartContext from "../../../Store/CartContext";
 import Card from "../../UI/Cards/Card";
