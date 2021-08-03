@@ -39,6 +39,15 @@ const wishListReducer = (state: any, action: any) => {
 };
 
 const reducer = (state: any, action: any) => {
+
+  if (action.type === 'REPLACE_CART'){    
+    const intialCartItems = action.product.cartProducts; 
+    return {
+      items: intialCartItems,
+      totalAmount: action.product.totalAmount
+    };   
+  }
+
   if (action.type === "ADD") {
     const updatedAmount =
       state.totalAmount + action.item.price * action.item.amount;
@@ -74,8 +83,7 @@ const reducer = (state: any, action: any) => {
     const existingProduct = state.items[existingProductID];
     const updatedAmount = state.totalAmount - existingProduct.price;
     let UpdatedProducts;
-    if (existingProduct.amount === 1) {
-      console.log("object");
+    if (existingProduct.amount === 1) {      
       UpdatedProducts = state.items.filter(
         (product: any) => product.id !== action.id
       );
@@ -107,12 +115,16 @@ const CartProvider = ({ children }: AuxProps) => {
   };
 
   const addWishListItemHandler = (product: any) => {
-    dispatchWishList({ type: "ADD", item: product });
+    dispatch({ type: "ADD", item: product });
   };
 
   const removeWishListItemHandler = (id: string) => {     
-    dispatchWishList({ type: "REMOVE", id: id });
+    dispatch({ type: "REMOVE", id: id });
   };
+
+  const replaceCartHandler  = (product : any) =>{    
+    dispatch({ type: "REPLACE_CART", product: product });
+  }
 
   const cartContext = {
     items: cartState.items,
@@ -122,6 +134,7 @@ const CartProvider = ({ children }: AuxProps) => {
     removeItemWishList: removeWishListItemHandler,
     addItem: addItemHandler,
     removeItem: removeItemHandler,
+    replaceCart : replaceCartHandler
   };
 
   return (

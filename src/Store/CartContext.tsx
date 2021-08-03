@@ -13,7 +13,6 @@ const product = {
     price : 0,
     image : '',
   }  
-  // {id:'', description : '', name:'',price:0,image:'',amount:0}
 const CartContext = React.createContext({
     items : [product],
     wishList :[wlProduct],
@@ -22,6 +21,7 @@ const CartContext = React.createContext({
     addItemWishList : ({})=>{},
     removeItemWishList : (id :string)=>{},
     removeItem : (id:string)=>{},
+    replaceCart : ({})=>{},
 });
 
 export default CartContext;
