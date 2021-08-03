@@ -115,11 +115,11 @@ const CartProvider = ({ children }: AuxProps) => {
   };
 
   const addWishListItemHandler = (product: any) => {
-    dispatch({ type: "ADD", item: product });
+    dispatchWishList({ type: "ADD", item: product });
   };
 
   const removeWishListItemHandler = (id: string) => {     
-    dispatch({ type: "REMOVE", id: id });
+    dispatchWishList({ type: "REMOVE", id: id });
   };
 
   const replaceCartHandler  = (product : any) =>{    
