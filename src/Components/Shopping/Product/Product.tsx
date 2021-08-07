@@ -2,6 +2,7 @@ import React, { useContext, useState } from "react";
 import classes from "./Product.module.css";
 import ShoppingForm from "./ShoppingItemForm";
 import CartContext from "../../../Store/CartContext";
+import { useHistory } from "react-router-dom";
 
 interface Product {
   id: string;
@@ -13,29 +14,29 @@ interface Product {
 interface ProductData {
   key: string;
   singleProduct: Product;
-  onClick : any
 }
 
-const Product: React.FC<ProductData> = ({ singleProduct, onClick }) => {
+const Product: React.FC<ProductData> = ({ singleProduct }) => {
   const [wishListStatus, setwishListStatus] = useState(false);
   const ctxCart = useContext(CartContext);
+  const history = useHistory();
 
   const manageWishListHandle = () => {
     setwishListStatus(!wishListStatus);
-    if (!wishListStatus){
-    ctxCart.addItemWishList({
-      id: singleProduct.id,
-      name: singleProduct.name,      
-      price: singleProduct.price,
-      image: singleProduct.image,           
-    });
-   } else {
-    ctxCart.removeItemWishList(singleProduct.id);
-   }
+    if (!wishListStatus) {
+      ctxCart.addItemWishList({
+        id: singleProduct.id,
+        name: singleProduct.name,
+        price: singleProduct.price,
+        image: singleProduct.image,
+      });
+    } else {
+      ctxCart.removeItemWishList(singleProduct.id);
+    }
   };
-const sendProductHandler = ()=>{
-  onClick(singleProduct);
-}
+  const sendProductHandler = () => {
+    history.push(`/gl-shop/product/${singleProduct.id}`);
+  };
   const addToCarthandle = (numOfItem: number) => {
     ctxCart.addItem({
       id: singleProduct.id,
@@ -49,7 +50,11 @@ const sendProductHandler = ()=>{
   return (
     <li className={classes["shop"]}>
       <div className={classes["item"]}>
-        <img src={singleProduct.image} alt={singleProduct.name} onClick={sendProductHandler}/>
+        <img
+          src={singleProduct.image}
+          alt={singleProduct.name}
+          onClick={sendProductHandler}
+        />
         <div className={classes["detail"]}>
           <h3>{singleProduct.name}</h3>
           <div className={classes["description"]}>

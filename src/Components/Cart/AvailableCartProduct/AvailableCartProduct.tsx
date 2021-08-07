@@ -1,14 +1,13 @@
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import classes from "./AvailableCart.module.css";
 import CartContext from "../../../Store/CartContext";
 import Card from "../../UI/Cards/Card";
 import CartItem from "../CartItem/CartItem";
-interface AuxProp {
-  onClick: any;
-}
+import { useHistory } from "react-router-dom";
 
-const AvailableCartProduct: React.FC<AuxProp> = ({ onClick }) => {
+const AvailableCartProduct: React.FC = () => {
   const cartctx = useContext(CartContext);
+  const history = useHistory();
   const hasItems = cartctx.items.length > 0;
 
   const addtoCartHandler = (product: any) => {
@@ -17,6 +16,10 @@ const AvailableCartProduct: React.FC<AuxProp> = ({ onClick }) => {
 
   const removefromCartHandler = (id: string) => {
     cartctx.removeItem(id);
+  };
+
+  const redirectToProductsHandle = () => {
+    history.push("/gl-shop/product");
   };
   return (
     <div className={classes["backdrop"]}>
@@ -38,16 +41,21 @@ const AvailableCartProduct: React.FC<AuxProp> = ({ onClick }) => {
                     onRemove={removefromCartHandler.bind(null, product.id)}
                   ></CartItem>
                 );
-              })}              
+              })}
               <div className={classes["total"]}>
-               {hasItems ?  <span>Total</span> : <h4>Cart is empty</h4>}
-                <span>₹{Math.abs(parseFloat(cartctx.totalAmount.toFixed(2)))}</span>
+                {hasItems ? <span>Total</span> : <h4>Cart is empty</h4>}
+                <span>
+                  ₹{Math.abs(parseFloat(cartctx.totalAmount.toFixed(2)))}
+                </span>
               </div>
             </ul>
           </div>
           <div className={classes["actions"]}>
-            <button className={classes["button--alt"]} onClick={onClick}>
-              Cancel
+            <button
+              className={classes["button--alt"]}
+              onClick={redirectToProductsHandle}
+            >
+              Products
             </button>
             {hasItems && <button className={classes["button"]}>Order</button>}
           </div>

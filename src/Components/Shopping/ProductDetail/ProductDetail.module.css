@@ -1,79 +1,79 @@
 .backdrop {
-    position: fixed;
-    align-items: center;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    z-index: 20;
-    background-color: rgba(0, 0, 0, 0.75);
-  }
-  .cart {
-    max-width: 40rem;
-    max-height: fit-content;  
-    width: 90%;
-    margin: 2rem auto;
-    animation: meals-appear 1s ease-out forwards;
-  }
-  
-.shop {
-    display: flex;
-    justify-content: space-between;
-    margin: 1rem;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    border-bottom: 1px solid #ccc;
-  }
-  
-  .shop h3 {
-    margin: 0 0 0.25rem 0;
-  }
+  margin-top: 5%;
+  position: fixed;
+  align-items: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 20;
+  background-color: rgba(0, 0, 0, 0.75);
+}
+.cart {
+  max-width: 40rem;
+  max-height: fit-content;
+  width: 90%;
+  margin: 2rem auto;
+  animation: meals-appear 1s ease-out forwards;
+}
 
- .shop img{
-     width: 10rem;
-     height: 7rem;
- }
- 
- .item{    
-     display: flex;
-     justify-content: center;
- }
- .detail{
-   padding-left: 2rem;
- }
-  .description {
-    font-style: italic;
-    
-  }
-  
-  .price {
-    margin-top: 0.25rem;
-    font-weight: bold;
-    color: #FD4D5A;
-    font-size: 1.25rem;
-  }
-  .actions button {
-    font: inherit;
-    cursor: pointer;
-    background-color: transparent;
-    border: 1px solid #FD4D5A;
-    padding: 0.5rem 2rem;
-    border-radius: 25px;
-    margin-left: 1rem;
-  }
-  
-  .actions button:hover,
-  .actions button:active {
-    background-color: #FD4D5A;
-    border-color: #FD4D5A;
-    color: white;
-  }
-  
-  .actions .button--alt {
-    color: #FD4D5A;
-  }
-  
-  .actions .button {
-    background-color: #FD4D5A;
-    color: white;
-  }
+.shop {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #ccc;
+}
+
+.shop h3 {
+  margin: 0 0 0.25rem 0;
+}
+
+.shop img {
+  width: 10rem;
+  height: 7rem;
+}
+
+.item {
+  display: flex;
+  justify-content: center;
+}
+.detail {
+  padding-left: 2rem;
+}
+.description {
+  font-style: italic;
+}
+
+.price {
+  margin-top: 0.25rem;
+  font-weight: bold;
+  color: #fd4d5a;
+  font-size: 1.25rem;
+}
+.actions button {
+  font: inherit;
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid #fd4d5a;
+  padding: 0.5rem 2rem;
+  border-radius: 25px;
+  margin-left: 1rem;
+}
+
+.actions button:hover,
+.actions button:active {
+  background-color: #fd4d5a;
+  border-color: #fd4d5a;
+  color: white;
+}
+
+.actions .button--alt {
+  color: #fd4d5a;
+}
+
+.actions .button {
+  background-color: #fd4d5a;
+  color: white;
+}

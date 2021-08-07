@@ -1,4 +1,3 @@
-  
 .shops {
   max-width: 60rem;
   width: 90%;
@@ -11,9 +10,21 @@
   margin: 0;
   padding: 0;
 }
+.main-image {
+  width: 100%;
+  /* height: 30rem; */
+  z-index: 1;
+  overflow: unset;
+}
 
+.main-image img {
+  margin-top: 5rem;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 .error {
-  color:red;
+  color: red;
   text-align: center;
 }
 
